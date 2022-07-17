@@ -99,10 +99,29 @@
             <h2 class="title title_left">
                 Получите бесплатную консультацию<br>по подбору пульсометра 
             </h2>
-            <div class="consultation_discr">
+            <div class="consultation__descr">
                 Просто заполните форму заявки<br> и мы перезвоним вам в течении 10 минут
             </div>
+            <form style="feed-form" action="#">
+                <!-- required - обязательное заполнение -->
+                <input name="name" required placeholder="Ваше имя" type="text">
+                <input name="phone" required placeholder="Ваш телефон" type="number">
+                <input name="email" required placeholder="Ваш E-mail" type="email">
+                <!-- <input type="button" value="Заказать косультацию"> -->
+
+                <!-- <input type="submit" value="Заказать косультацию"> -->
+
+                <!-- Если внутри form мы прописываем button то он содержит в себе submit(проверка заполнения формы)  -->
+
+                <!-- <textarea style="resize: none;" placeholder="Тоже работает" name="" id="" cols="30" rows="10"></textarea> -->
+                <!-- Можно задавать css првила внутри этого тэга. resaze:none отключает возможность пользователя изменять размер оласти.  -->
+
+
+                <button>Заказать косультацию</button>
+                <!-- <input type="reset" value="Очистить"> --> <!-- Кнопка очистить -->
+            </form>
+            
         </div>
-    </div>
+    </div>  
 </body>
 </html>
