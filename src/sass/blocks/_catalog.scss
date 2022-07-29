@@ -13,5 +13,8 @@
         text-align: center;
         line-height: 50px; /* этим способом можно выставить текст в одну строчку по центру задав межстрочный интервал в размер блока (+2px border)  */
         transform:skewX(-30deg);
+        div {
+            transform:skewX(30deg);
+        }
     }
 }
