@@ -3,6 +3,9 @@
     &__tabs {
         margin-top: 46px;
         list-style-type: none; /* Выключаем точки */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     &__tab {
         width: 222px;
@@ -13,8 +16,14 @@
         text-align: center;
         line-height: 50px; /* этим способом можно выставить текст в одну строчку по центру задав межстрочный интервал в размер блока (+2px border)  */
         transform:skewX(-30deg);
+        margin: 0 5px;
         div {
             transform:skewX(30deg);
+        }
+        &_active {
+            color: #fff;
+            background-color: $main-color;
+            border: none;
         }
     }
 }
