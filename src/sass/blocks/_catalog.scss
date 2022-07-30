@@ -6,6 +6,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 0;
+        padding-left: 0;
     }
     &__tab {
         width: 222px;
@@ -17,6 +19,10 @@
         line-height: 50px; /* этим способом можно выставить текст в одну строчку по центру задав межстрочный интервал в размер блока (+2px border)  */
         transform:skewX(-30deg);
         margin: 0 5px;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 3px 3px 20px $main-color; /* смещение по х,y,размытие, цвет */
+        }
         div {
             transform:skewX(30deg);
         }
