@@ -47,6 +47,22 @@
     .feed-form {
         margin: 36px auto;
     }
+    .catalog {
+        &__tabs {
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        &__tab {
+            &:nth-child(2) {
+                margin-top: 10px;
+            }
+            &:nth-child(3) {
+                margin-top: 10px;
+            }
+        }
+    }
+
 }
 
 @media (max-width: 575px) {
