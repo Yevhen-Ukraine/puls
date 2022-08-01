@@ -98,4 +98,19 @@
             font-size: 15px;
         }
     }
+    .feed {
+        &__item {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        &__subtitle {
+            margin-top: 20px;
+        }
+        &__text {
+            width: 280px;
+            margin: 0;
+        }
+    }
 }
