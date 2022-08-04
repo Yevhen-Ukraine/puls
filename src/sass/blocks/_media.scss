@@ -78,6 +78,7 @@
         &__icons {
             flex-direction: column;
             align-items: center;
+            width: 100%;
         }
         &__icon {
             margin-bottom: 15px;
@@ -121,4 +122,29 @@
             margin: 0;
         }
     }
+    .modal {
+        max-width: 280px;
+        padding-left: 15px;
+        padding-right: 15px;
+        input {
+            width: 249px;
+        }
+        &__close {
+            top: 3px;
+            right: 3px;
+        }
+        &__subtitle {
+            font-size: 15px;
+            line-height: 15px;
+        }
+        &__descr {
+            font-size: 12px;
+        }
+    }
+    .button {
+        &_modal {
+            width: 249px;
+        }
+    }
+
 }
