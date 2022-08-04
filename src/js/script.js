@@ -34,5 +34,23 @@ $(document).ready(function(){
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+    // Modal
+    // []-скобки - Получение элемента по data отрибуту
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow'); //Включает фон
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #thanks, #order').fadeOut('slow'); //Закрываем модальное окно
+    });
+
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text()); //Вытаскивае текст с моделью пульсомертра и подставляет в модальлное окно
+            $('.overlay, #order').fadeIn('slow'); //Включает фон
+        });
+    });
+
+
 }); 
           
