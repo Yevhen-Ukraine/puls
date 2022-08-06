@@ -52,7 +52,23 @@ $(document).ready(function(){
     });
 
     $('#consultation-form').validate();
-    $('#consultation form').validate();
+    $('#consultation form').validate({
+        rules: {
+            name: "required",
+            phone: "required",
+            email: {
+                required: true,
+                email: true
+            }
+        }
+        messages: {
+            name: "Пожулуйста, введите своё имя",
+            email: {
+              required: "We need your email address to contact you",
+              email: "Your email address must be in the format of name@domain.com"
+            }
+        }
+    });
     $('#order form').validate();
 
 }); 
