@@ -51,26 +51,33 @@ $(document).ready(function(){
         });
     });
 
-    $('#consultation-form').validate();
-    $('#consultation form').validate({
-        rules: {
-            name: "required",
-            phone: "required",
-            email: {
-                required: true,
-                email: true
+
+    function valideForms(form){
+        $(form).validate({
+            rules: {
+                name: "required",
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: "Пожулуйста, введите своё имя",
+                phone: "Пожалуйста, введите номер своего телефона",
+                email: {
+                  required: "Пожулуйста, введите свою почту",
+                  email: "Непрвильно введён адрес почты"
+                }
             }
-        },
-        messages: {
-            name: "Пожулуйста, введите своё имя",
-            phone: "Пожалуйста, введите номер своего телефона",
-            email: {
-              required: "Пожулуйста, введите свою почту",
-              email: "Непрвильно введён адрес почты"
-            }
-        }
-    });
-    $('#order form').validate();
+        });
+    }
+
+    valideForms('#consultation-form');
+    valideForms('#consultation form');
+    valideForms('#order form');
+
+    $('input[name=phone]').mask("+3 (999) 999-99-99");
 
 }); 
           
